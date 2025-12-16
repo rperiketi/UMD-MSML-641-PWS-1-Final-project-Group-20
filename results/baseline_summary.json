@@ -1,0 +1,18 @@
+{
+  "model": "Logistic Regression (OneVsRest)",
+  "features": "TF-IDF (max_features=10000, ngram_range=(1,2))",
+  "train_samples": 127656,
+  "val_samples": 31915,
+  "macro_f1": 0.5288449914357316,
+  "micro_f1": 0.6449879064767535,
+  "exact_match_ratio": 0.8610371298762337,
+  "hamming_loss": 0.1389628701237663,
+  "per_class_f1": {
+    "toxic": 0.7042178323545115,
+    "severe_toxic": 0.41373671300081766,
+    "obscene": 0.7238095238095238,
+    "threat": 0.34759358288770054,
+    "insult": 0.6431446838740232,
+    "identity_hate": 0.34056761268781305
+  }
+}

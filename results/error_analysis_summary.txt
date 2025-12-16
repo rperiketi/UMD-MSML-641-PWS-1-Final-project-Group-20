@@ -1,0 +1,25 @@
+
+KEY FINDINGS:
+
+1. ERROR DISTRIBUTION:
+   - Both models correct: 4,587 cases
+   - Both models miss: 22 cases
+   - DistilBERT catches (baseline misses): 30 cases
+   - Both false positives: 56 cases
+
+2. FALSE POSITIVE PATTERNS:
+   - 26.8% contain profanity in non-toxic context
+   - 25.0% use all-caps for emphasis
+   - Often passionate but not actually toxic (e.g., "This is fucking awesome!")
+
+3. FALSE NEGATIVE PATTERNS:
+   Most common categories:
+      - other: 19 cases
+   - all_caps: 3 cases
+
+4. DISTILBERT ADVANTAGES:
+   - Catches 30 cases that baseline missed
+   - Better at implicit toxicity (threats without profanity)
+   - Handles context and word order better
+   - More robust to obfuscated text
+

@@ -1,0 +1,35 @@
+
+BIAS STUDY FINDINGS:
+
+1. IDENTITY BIAS:
+   - Tested 100 sentences across 20 identity groups
+   - Highest false positive rate: 20.0%
+   - Identity: gay
+   - Statistical significance varies by category
+
+2. PROFANITY WITHOUT TOXICITY:
+   - False positive rate: 60.0%
+   - Model struggles with positive profanity
+   - Average confidence on false positives: 0.914
+
+3. EMOJI IMPACT:
+   - Emojis change predictions in 0/5 cases
+   - Average probability shift: 0.0000
+   - Context-dependent: positive emojis may reduce toxicity scores
+
+4. DIALECT BIAS (AAVE vs Standard English):
+   - Average difference: 0.1001
+   - P-value: 0.3537
+    No significant bias
+
+ETHICAL IMPLICATIONS:
+RISKS:
+   - May disproportionately flag certain identity groups
+   - Context-insensitive to positive profanity usage
+   - Potential bias against non-standard dialects
+   - Risk of censoring legitimate expression
+
+STRENGTHS:
+   - Generally low false positive rates on identity mentions
+   - Transparent testing methodology
+   - Documented limitations

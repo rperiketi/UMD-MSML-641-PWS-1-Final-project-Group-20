@@ -1,0 +1,18 @@
+{
+  "model": "DistilBERT",
+  "training_epochs": 3,
+  "best_macro_f1": 0.6599064968024847,
+  "final_val_macro_f1": 0.6599064968024847,
+  "final_val_micro_f1": 0.7972972972972973,
+  "baseline_macro_f1": 0.5288449914357316,
+  "improvement": 0.1310615053667531,
+  "improvement_pct": 24.782593669071453,
+  "per_label_f1": {
+    "toxic": 0.8438763954052743,
+    "severe_toxic": 0.4662813102119461,
+    "obscene": 0.8390075014425851,
+    "threat": 0.45569620253164556,
+    "insult": 0.7674563591022444,
+    "identity_hate": 0.5871212121212122
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "total_comments": 159571,
+  "toxic_comments": 16225,
+  "clean_comments": 143346,
+  "label_distribution": {
+    "toxic": 15294,
+    "obscene": 8449,
+    "insult": 7877,
+    "severe_toxic": 1595,
+    "identity_hate": 1405,
+    "threat": 478
+  },
+  "avg_text_length_toxic": 303.30403697996917,
+  "avg_text_length_clean": 404.3471739706724,
+  "max_labels_per_comment": 6,
+  "comments_with_multiple_labels": 9865
+}

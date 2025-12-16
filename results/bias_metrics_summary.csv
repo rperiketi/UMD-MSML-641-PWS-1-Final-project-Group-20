@@ -1,0 +1,5 @@
+Bias Type,Metric,Severity
+Identity (max FPR),20.0%,Low
+Profanity (positive),60.0%,High
+Emoji Impact,0.0000,Low
+Dialect (AAVE bias),0.1001,Low
