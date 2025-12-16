@@ -13,7 +13,6 @@ import plotly.express as px
 # Page config
 st.set_page_config(
     page_title="Toxicity Detector",
-    page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -159,12 +158,12 @@ def highlight_potential_toxic_words(text):
 # Main app
 def main():
     # Header
-    st.markdown('<div class="main-header">🛡️ Toxicity Detector</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">Hate Speech Detection System with Bias Analysis</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">AI-powered content moderation using DistilBERT</div>', unsafe_allow_html=True)
     
     # Sidebar
     with st.sidebar:
-        st.header("ℹ️ About")
+        st.header(" About")
         st.write("""
         This tool uses a fine-tuned DistilBERT model to detect toxic content 
         across 6 categories:
@@ -176,7 +175,7 @@ def main():
         - **Identity Hate**: Hate speech
         """)
         
-        st.header("⚙️ Model Info")
+        st.header(" Model Info")
         st.write("""
         - **Model**: DistilBERT (66M params)
         - **Training Data**: 127K comments
@@ -184,15 +183,6 @@ def main():
         - **Improvement**: +13% over baseline
         """)
         
-        st.header("⚠️ Disclaimer")
-        st.warning("""
-        This is a research prototype. It may:
-        - Flag non-toxic content (false positives)
-        - Miss subtle toxicity (false negatives)
-        - Show bias across demographics
-        
-        **Not for production use without human review.**
-        """)
         
         st.header("📊 Project Stats")
         col1, col2 = st.columns(2)
@@ -206,14 +196,12 @@ def main():
     # Load model
     try:
         tokenizer, model, device = load_model()
-        st.success(f"✅ Model loaded successfully on {device}")
+        
     except Exception as e:
         st.error(f"❌ Error loading model: {e}")
         st.info("Make sure the model is saved in './models/distilbert/' directory")
         st.stop()
     
-    # Input section
-    st.header("🔍 Analyze Text")
     
     # Text input
     text_input = st.text_area(
@@ -241,7 +229,7 @@ def main():
             text_input = "I hate you and people like you shouldn't exist"
     
     # Analyze button
-    analyze_clicked = st.button("🚀 Analyze Text", type="primary", use_container_width=True)
+    analyze_clicked = st.button(" Analyze Text", type="primary", use_container_width=True)
     
     # Analysis results
     if analyze_clicked and text_input:
@@ -288,15 +276,15 @@ def main():
                 st.divider()
         
         # Highlighted text
-        st.header("🔦 Highlighted Analysis")
+        st.header(" Highlighted Analysis")
         st.markdown(
             f'<div style="padding: 1rem; background-color: #f8f9fa; border-radius: 0.5rem; font-size: 1.1rem;">{highlight_potential_toxic_words(text_input)}</div>',
             unsafe_allow_html=True
         )
-        st.caption("⚠️ Highlighted words are common toxic indicators (heuristic-based, not model output)")
+        st.caption(" Highlighted words are common toxic indicators (heuristic-based, not model output)")
         
         # Explanation
-        st.header("💡 Interpretation")
+        st.header(" Interpretation")
         
         detected_categories = [label for label, pred in zip(results['labels'], results['predictions']) if pred]
         
@@ -307,12 +295,12 @@ def main():
                 st.info("ℹ️ This text contains profanity but may not be genuinely toxic (e.g., positive emphasis)")
             
             if 'Threat' in detected_categories or 'Severe Toxic' in detected_categories:
-                st.error("🚨 This content contains serious threats or severe toxicity. Human review recommended.")
+                st.error(" This content contains serious threats or severe toxicity. Human review recommended.")
         else:
             st.success("✅ No toxicity detected across all categories")
         
         # Technical details (expandable)
-        with st.expander("🔬 Technical Details"):
+        with st.expander(" Technical Details"):
             st.write("**Model Configuration:**")
             st.code(f"""
 Model: DistilBERT-base-uncased
@@ -337,9 +325,7 @@ Inference Time: ~0.1 seconds
     st.divider()
     st.markdown("""
     <div style="text-align: center; color: #666; padding: 2rem;">
-        <p>Built with ❤️ using Streamlit and DistilBERT</p>
-        <p>Final Project - NLP Course | December 2024</p>
-        <p><i>⚠️ Research prototype - Not for production use</i></p>
+        <p>Final Project - NLP Course | December 2025</p>
     </div>
     """, unsafe_allow_html=True)
 
