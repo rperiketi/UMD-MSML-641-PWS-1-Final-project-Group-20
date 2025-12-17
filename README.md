@@ -1,9 +1,9 @@
 
 # Hate Speech Detection System with Bias Analysis
 
-Multi-label toxicity detection using DistilBERT. Achieves 13.3% improvement over baseline with comprehensive bias testing.
+Multi-label toxicity detection using DistilBERT. Achieves 25% improvement over baseline with comprehensive bias testing.
 
-**Results:** Macro F1: 0.70 (baseline) → 0.79 (DistilBERT)
+**Results:** Macro F1: 0.52 (baseline) → 0.65 (DistilBERT)
 
 
 ## Quick Start
@@ -24,15 +24,8 @@ jupyter notebook
 streamlit run app.py
 ```
 
-## Key Results
-
-| Label | Baseline F1 | DistilBERT F1 | Improvement |
-|-------|-------------|---------------|-------------|
-| Toxic | 0.716 | 0.798 | +11.5% |
-| Threat | 0.339 | 0.519 | +53.1% |
-
 **Bias Findings:**
-- Significant religious identity bias (p=0.024)
-- 60% false positive on positive profanity
-- Marginal AAVE dialect bias (+3.8%)
+- Significant religious identity bias
+- False positive on positive profanity
+- Marginal AAVE dialect bias
 
