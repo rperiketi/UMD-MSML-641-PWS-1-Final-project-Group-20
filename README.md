@@ -29,3 +29,12 @@ streamlit run app.py
 - False positive on positive profanity
 - Marginal AAVE dialect bias
 
+**Per-Label Improvements:**
+- Best gains on rare labels:
+- Threat: +31% (0.348 → 0.456)
+- Identity Hate: +71.8% (0.341 → 0.587)
+- Strong on frequent labels:
+- Obscene: 0.724
+- Insult: 0.643
+
+
